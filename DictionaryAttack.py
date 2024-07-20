@@ -4,7 +4,7 @@ import time
 
 ### Function to load the dictionary file from file path. Opens in read mode and splits lines.
 def load_passwords(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
+    with open(file_path, "r", encoding="latin1") as file:
         passwords = file.read().splitlines()
     return passwords
 
@@ -51,5 +51,5 @@ correct_password = str(input("Enter the correct password: "))
 target_hash = hash_password(correct_password)
 
 ### File path directs to dictionary of common passwords. Run attack initiates the cracker.
-file_path = "304k prob.txt"
+file_path = "1pt6Mil.txt"
 run_attack(file_path, target_hash)
